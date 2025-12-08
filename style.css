@@ -4,7 +4,7 @@
 }
 
 :root {
-    --gradient-background: linear-gradient(120deg, #ff8709 0%, #f7bdf8 99%);
+    --gradient-background: linear-gradient(120deg, #ff8709 0%, #f7bdf8 90%);
     --petrol: #0F1C2E;
     --azul-gris: #2C3E52;
     --orange: #ff8709;
@@ -18,7 +18,7 @@ body {
     background: var(--gradient-background);
     color: var(--crema);
     line-height: 1.6;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     text-align: center;
 }
 
@@ -41,10 +41,45 @@ body {
 }
 
 .services {
-    background: var(--azul-gris);
+    background: var(--petrol);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 5px;
+
+}
+
+.card {
+    padding: 22px; 
+    background-color: var(--azul-gris);
+    border-radius: 20px;
+    border-image: var(--gradient-background) 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+    align-items: center;
+}
+
+.imagen-card {
+    max-width: 90%;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-card img {
+    height: 300px;
+    object-fit: cover; /* Recorta manteniendo proporción */
+    object-position: center center; /* Centra imagen */
 }
