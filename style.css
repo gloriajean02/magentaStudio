@@ -1,7 +1,50 @@
-
 * {
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --gradient-background: linear-gradient(120deg, #ff8709 0%, #f7bdf8 99%);
+    --petrol: #0F1C2E;
+    --azul-gris: #2C3E52;
+    --orange: #ff8709;
+    --crema: #F4EDE2;
+}
 
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--orange);
+    background: var(--gradient-background);
+    color: var(--crema);
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.hero {
+    height: 80vh;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.hero button {
+    padding: 10px;
+    background:none;
+    color: var(--crema);
+    border: solid 1px var(--crema);
+    border-radius: 50px;
+}
+
+.services {
+    background: var(--azul-gris);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
