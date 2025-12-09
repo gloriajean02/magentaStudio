@@ -98,3 +98,24 @@ gsap.from(".footer", {
     }
 });
 
+// TEXTOS HERO
+gsap.from(".hero h1, .hero p", {
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out"
+});
+
+// TÍTULO SECCIÓN SERVICIOS
+gsap.from(".services h2", {
+    opacity: 0,
+    y: 40,
+    duration: 0.8,
+    scrollTrigger: {
+        trigger: ".services",
+        start: "top 80%",
+        end: "top 60%",
+        scrub: 1
+    }
+});
