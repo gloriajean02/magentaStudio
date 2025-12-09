@@ -4,10 +4,10 @@
 }
 
 :root {
-    --gradient-background: linear-gradient(120deg, #ff8709 0%, #f7bdf8 90%);
+    --gradient-background: linear-gradient(120deg,#5d02c2 0%, #ff8709 50%, #f22996 90%);
     --petrol: #0F1C2E;
-    --azul-gris: #2C3E52;
-    --orange: #ff8709;
+    --azul-gris: linear-gradient(120deg,#3c205c 0%, #1f2d3c 50%, #132236 90%);
+    --violet: #5d02c2;
     --crema: #F4EDE2;
 }
 
@@ -99,7 +99,8 @@ body {
 
 .card {
     padding: 22px; 
-    background-color: var(--azul-gris);
+    background: var(--petrol);
+    background: var(--azul-gris);
     border-radius: 20px;
     border-image: var(--gradient-background) 2;
     display: flex;
@@ -120,10 +121,12 @@ body {
 
 .imagen-card img {
     height: 350px;
+    width: 300px;
     object-fit: cover; /* Recorta manteniendo proporción */
     object-position: center center; /* Centra imagen */
 }
 
 .cta-section {
     height: 100vh;
+    background: var(--petrol);
 }

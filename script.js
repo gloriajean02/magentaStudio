@@ -1,7 +1,7 @@
 //Añadir esto para poder utilizarlo
 gsap.registerPlugin(ScrollTrigger);
 
-const formasTL = gsap.timeline({ 
+const formasTL = gsap.timeline({
     repeat: -1, //Se repite infinito
     yoyo: true,
     ease: "sine.inOut"  //LENTO, RÁPIDO, LENTO
@@ -10,7 +10,7 @@ const formasTL = gsap.timeline({
 
 //Lugares hacia donde se va a mover con el yoyó
 formasTL.to("#forma-1", { y: 100, duration: 4 }, 0)
-    .to("#forma-2", { y: 100, duration: 5 }, 0) 
+    .to("#forma-2", { y: 100, duration: 5 }, 0)
     .to("#forma-3", { rotation: 180, duration: 6 }, 0)
     .to("#forma-4", { rotation: 180, duration: 7 }, 0);
 
@@ -61,6 +61,17 @@ cardsTl
     .from("#card-4", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, "-=0.2");
 
 
-
+gsap.fromTo(".cta-section",
+    { backgroundColor: "var(--petrol)" },
+    {
+        backgroundColor: "var(--violet)",
+        scrollTrigger: {
+            trigger: ".cta-section",
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: true,
+            markers: true
+        }
+    });
 
 
