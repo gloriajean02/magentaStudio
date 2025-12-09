@@ -4,15 +4,15 @@ gsap.registerPlugin(ScrollTrigger);
 const formasTL = gsap.timeline({
     repeat: -1, //Se repite infinito
     yoyo: true,
-    ease: "sine.inOut"  //LENTO, RÁPIDO, LENTO
+    ease: "linear"  //ritmo constante
 });
 
 
 //Lugares hacia donde se va a mover con el yoyó
-formasTL.to("#forma-1", { y: 100, x:90, duration: 9 }, 0)
-    .to("#forma-2", { y: -100, x:-100, duration: 10 }, 0)
-    .to("#forma-3", { rotation: 180, y: -60, x:100, duration: 11 }, 0)
-    .to("#forma-4", { rotation: 180, y: -100, x:100, duration: 12 }, 0);
+formasTL.to("#forma-1", { rotation: 180, y: 100, x: 90, duration: 9 }, 0)
+    .to("#forma-2", { rotation: 180, y: -100, x: -100, duration: 10 }, 0)
+    .to("#forma-3", { rotation: 180, y: -60, x: 100, duration: 11 }, 0)
+    .to("#forma-4", { rotation: 180, y: -100, x: 100, duration: 12 }, 0);
 
 gsap.to(".forma", {
     yPercent: -200,  // Suben fuera del viewport
@@ -67,11 +67,34 @@ gsap.fromTo(".cta-content",
         backgroundColor: "var(--violet)",
         scrollTrigger: {
             trigger: ".cta-content",
-            start: "top 80%",
+            start: "top 90%",
             end: "bottom 20%",
-            scrub: true,
-            markers: true
+            scrub: 1,
+            markers: false
         }
     });
 
+
+gsap.to(".cta-button", {
+    scale: 1.05,
+    y: -3,
+    repeat: -1,      // infinito
+    yoyo: true,      // va y vuelve
+    duration: 0.8,
+    ease: "power1.inOut"
+});
+
+// FOOTER desde abajo
+gsap.from(".footer", {
+    opacity: 0,
+    y: 120,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+        trigger: ".footer",
+        start: "top 150%",
+        end: "top 95%",
+        scrub: 1
+    }
+});
 
