@@ -127,6 +127,14 @@ body {
 }
 
 .cta-section {
-    height: 100vh;
     background: var(--petrol);
+
+}
+
+.cta-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

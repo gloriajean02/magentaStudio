@@ -9,10 +9,10 @@ const formasTL = gsap.timeline({
 
 
 //Lugares hacia donde se va a mover con el yoyó
-formasTL.to("#forma-1", { y: 100, duration: 4 }, 0)
-    .to("#forma-2", { y: 100, duration: 5 }, 0)
-    .to("#forma-3", { rotation: 180, duration: 6 }, 0)
-    .to("#forma-4", { rotation: 180, duration: 7 }, 0);
+formasTL.to("#forma-1", { y: 100, x:90, duration: 9 }, 0)
+    .to("#forma-2", { y: -100, x:-100, duration: 10 }, 0)
+    .to("#forma-3", { rotation: 180, y: -60, x:100, duration: 11 }, 0)
+    .to("#forma-4", { rotation: 180, y: -100, x:100, duration: 12 }, 0);
 
 gsap.to(".forma", {
     yPercent: -200,  // Suben fuera del viewport
@@ -61,12 +61,12 @@ cardsTl
     .from("#card-4", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, "-=0.2");
 
 
-gsap.fromTo(".cta-section",
+gsap.fromTo(".cta-content",
     { backgroundColor: "var(--petrol)" },
     {
         backgroundColor: "var(--violet)",
         scrollTrigger: {
-            trigger: ".cta-section",
+            trigger: ".cta-content",
             start: "top 80%",
             end: "bottom 20%",
             scrub: true,
