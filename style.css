@@ -97,9 +97,11 @@ body {
 }
 
 .cards-grid {
+    padding: 20px 100px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -111,7 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 250px;
+    max-width: 350px;
     align-items: center;
 }
 
@@ -125,8 +127,8 @@ body {
 }
 
 .imagen-card img {
-    height: 250px;
-    width: 200px;
+    height: 350px;
+    width: 300px;
     object-fit: cover;
     /* Recorta manteniendo proporción */
     object-position: center center;
@@ -213,7 +215,6 @@ body {
 
 @media (max-width: 1024px) {
     .cards-grid {
-        justify-content: center;
         padding: 10px 50px;
     }
 }
@@ -228,10 +229,6 @@ body {
         border-radius: 50% 50% 0 0 / 150px 150px 0 0;
 
     }
-
-    
-
-
 }
 
 

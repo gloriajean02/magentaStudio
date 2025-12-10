@@ -41,19 +41,19 @@ gsap.to(".services", {
 
 const cardsTl = gsap.timeline({
     scrollTrigger: {
-        trigger: ".cards-grid",  
+        trigger: ".services",
         start: "top 80%",
         end: "center",
-        scrub: 1,
+        scrub: 0.3,
         markers: false
     }
 });
 
 cardsTl
-    .from("#card-1", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, 0)
-    .from("#card-2", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, "0.5")
-    .from("#card-3", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, "0.8")
-    .from("#card-4", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, "1");
+    .from("#card-1", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, 0)
+    .from("#card-2", { scale: 0.5, opacity: 0, y: 100, duration: 1.4 }, "0.6")
+    .from("#card-3", { scale: 0.5, opacity: 0, y: 100, duration: 1.4 }, "1.2")
+    .from("#card-4", { scale: 0.5, opacity: 0, y: 100, duration: 1.4 }, "1.8");
 
 
 gsap.fromTo(".cta-content",
