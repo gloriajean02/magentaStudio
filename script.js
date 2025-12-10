@@ -26,23 +26,18 @@ gsap.to(".forma, .hero-content", {
 });
 
 
-gsap.fromTo(".services",
-    {
-        // Estado inicial ovalado
-        borderRadius: "50% 50% 0 0 / 300px 300px 0 0",
+gsap.to(".services", {
+    borderRadius: "0",
+    scrollTrigger: {
+        trigger: ".services",
+        start: "top",
+        end: "top 20%",
+        scrub: 1,
+        markers: false
     },
-    {
-        scrollTrigger: {
-            trigger: ".services",
-            start: "top 80%",
-            end: "bottom 100%",
-            scrub: 1,
-            // markers: true
-        },
-        // Estado final recto
-        borderRadius: "0",
-        duration: 1
-    });
+    duration: 0.2
+});
+
 
 const cardsTl = gsap.timeline({
     scrollTrigger: {
@@ -56,9 +51,9 @@ const cardsTl = gsap.timeline({
 
 cardsTl
     .from("#card-1", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, 0)
-    .from("#card-2", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, "-=0.2")
-    .from("#card-3", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, "-=0.2")
-    .from("#card-4", { scale: 0.5, opacity: 0, y: 100, duration: 0.5 }, "-=0.2");
+    .from("#card-2", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, "0.5")
+    .from("#card-3", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, "0.8")
+    .from("#card-4", { scale: 0.5, opacity: 0, y: 100, duration: 1 }, "1");
 
 
 gsap.fromTo(".cta-content",

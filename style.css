@@ -56,8 +56,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* Detrás del contenido */
-    pointer-events: none;
 }
 
 .forma {
@@ -86,6 +84,7 @@ body {
 }
 
 .services {
+    border-radius: 50% 50% 0 0 / 300px 300px 0 0;
     padding: 100px 20px;
     background: var(--petrol);
     display: flex;
@@ -148,7 +147,8 @@ body {
     gap: 10px;
 }
 
-#cta-button, .botonEnviar {
+#cta-button,
+.botonEnviar {
     padding: 10px;
     background: var(--pink);
     border: dashed 2px var(--orange);
@@ -209,4 +209,48 @@ body {
     text-align: right;
     font-size: 1rem;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 720px) {
+    .formas-geometricas {
+        width: 80%;
+        left: 40px;
+    }
+
+    .services {
+        border-radius: 50% 50% 0 0 / 150px 150px 0 0;
+
+    }
+
+    .cards-grid {
+        justify-content: center;
+    }
+
+
+}
+
+
+@media (max-width: 480px) {
+    .formas-geometricas {
+        width: 60%;
+    }
+
+    .services {
+        border-radius: 50% 50% 0 0 / 80px 80px 0 0;
+        padding: 50px;
+    }
+
+    .imagen-card {
+        display: none;
+    }
+
+    .cta-content h2 {
+        padding: 60px;
+    }
+
+    #cerrar {
+    text-align: center;
+}
 }
