@@ -148,7 +148,7 @@ body {
     gap: 10px;
 }
 
-.cta-button {
+#cta-button, .botonEnviar {
     padding: 10px;
     background: var(--pink);
     border: dashed 2px var(--orange);
@@ -162,3 +162,51 @@ body {
     padding: 20px;
 }
 
+
+#contacto {
+    background-color: var(--petrol);
+    padding: 50px clamp(1rem, 6vw, 70px);
+    border-radius: 20px;
+    width: 50%;
+}
+
+.cajaFormulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 16px;
+}
+
+.campo textarea {
+    min-height: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#cerrar {
+    text-align: right;
+    font-size: 1rem;
+    cursor: pointer;
+}

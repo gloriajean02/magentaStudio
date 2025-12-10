@@ -14,7 +14,7 @@ formasTL.to("#forma-1", { rotation: 180, y: 100, x: 90, duration: 9 }, 0)
     .to("#forma-3", { rotation: 180, y: -60, x: 100, duration: 11 }, 0)
     .to("#forma-4", { rotation: 180, y: -100, x: 100, duration: 12 }, 0);
 
-gsap.to(".forma", {
+gsap.to(".forma, .hero-content", {
     yPercent: -200,  // Suben fuera del viewport
     scrollTrigger: {
         trigger: ".hero",
@@ -75,7 +75,7 @@ gsap.fromTo(".cta-content",
     });
 
 
-gsap.to(".cta-button", {
+gsap.to("#cta-button", {
     scale: 1.05,
     y: -3,
     repeat: -1,      // infinito
@@ -118,4 +118,19 @@ gsap.from(".services h2", {
         end: "top 60%",
         scrub: 1
     }
+});
+
+
+document.getElementById("cta-hero").addEventListener("click", () => {
+    document.getElementById("cta").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("cta-button").addEventListener("click", () => {
+    document.getElementById("contacto").classList.toggle("hidden");
+    document.getElementById("cta-button").classList.toggle("hidden");
+});
+
+document.getElementById("cerrar").addEventListener("click", () => {
+    document.getElementById("contacto").classList.toggle("hidden");
+    document.getElementById("cta-button").classList.toggle("hidden");
 });

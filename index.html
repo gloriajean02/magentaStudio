@@ -26,7 +26,7 @@
             <h1>magenta studio</h1>
             <p>Hacemos magia digital</p>
         </div>
-        <button class="cta-primary">Comienza tu proyecto</button>
+        <button id="cta-hero" href="#cta">Comienza tu proyecto</button>
     </section>
 
     <!-- Características -->
@@ -35,8 +35,8 @@
         <div class="cards-grid">
             <div class="card" id="card-1">
                 <div class="info-card">
-                    <h3>Diseño único</h3>
-                    <p>Interfaces que capturan la esencia de tu marca, sin plantillas ni clichés.</p>
+                    <h3>Aplicaciones web</h3>
+                    <p>Desarrollamos aplicaciones web funcionales y seguras. Detrás de cada interfaz hay un código sólido listo para crecer con tu proyecto.</p>
                 </div>
 
                 <div class="imagen-card">
@@ -46,8 +46,8 @@
             </div>
             <div class="card" id="card-2">
                 <div class="info-card">
-                    <h3>Diseño único</h3>
-                    <p>Interfaces que capturan la esencia de tu marca, sin plantillas ni clichés.</p>
+                    <h3>Diseño web</h3>
+                    <p>Diseñamos webs bonitas y fáciles de usar. Cada pantalla estará pensada para guiar al usuario y transformar visitas en resultados.</p>
                 </div>
 
                 <div class="imagen-card">
@@ -57,8 +57,8 @@
             </div>
             <div class="card" id="card-3">
                 <div class="info-card">
-                    <h3>Diseño único</h3>
-                    <p>Interfaces que capturan la esencia de tu marca, sin plantillas ni clichés.</p>
+                    <h3>Identidad corporativa</h3>
+                    <p>Construimos marcas coherentes y reconocibles. Desde la paleta de color hasta los usos del logo, todo respira la personalidad de tu marca.</p>
                 </div>
 
                 <div class="imagen-card">
@@ -68,8 +68,8 @@
             </div>
             <div class="card" id="card-4">
                 <div class="info-card">
-                    <h3>Diseño único</h3>
-                    <p>Interfaces que capturan la esencia de tu marca, sin plantillas ni clichés.</p>
+                    <h3>Comunicación digital</h3>
+                    <p>Convertimos lo que quieres decir en historias que conectan con tu audiencia y hacen que recuerden tu marca.</p>
                 </div>
 
                 <div class="imagen-card">
@@ -81,10 +81,34 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="cta-section">
+    <section class="cta-section" id="cta">
         <div class="cta-content">
             <h2>¿Tienes un proyecto en mente?</h2>
-            <button class="cta-button">Contáctanos ahora</button>
+            <button id="cta-button">Contáctanos ahora</button>
+            <div id="contacto" class="hidden">
+                <div class="cajaFormulario">
+                    <p id="cerrar">x</p>
+                    <div class="formulario">
+                        <div class="campo">
+                            <label for="nombre">Nombre y apellidos</label>
+                            <input type="text" id="nombre" name="nombre">
+                        </div>
+                        <div class="campo">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto">
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje"></textarea>
+                        </div>
+                        <input type="submit" class="botonEnviar">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
