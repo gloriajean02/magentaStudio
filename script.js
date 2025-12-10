@@ -41,9 +41,9 @@ gsap.to(".services", {
 
 const cardsTl = gsap.timeline({
     scrollTrigger: {
-        trigger: "#card-1",
-        start: "top 100%",
-        end: "bottom 80%",
+        trigger: ".cards-grid",  
+        start: "top 80%",
+        end: "center",
         scrub: 1,
         markers: false
     }
